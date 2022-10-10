@@ -8,7 +8,7 @@ export const mapStateToProps = (state) => {
 
 export const mapDispatchToProps = (dispatch) => {
   return {
-    saveData: (data) => dispatch(saveData({ ...data })),
+    saveData: () => dispatch(saveData()),
     logOut : () => dispatch(logOut())
   };
 };

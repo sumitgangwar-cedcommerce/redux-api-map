@@ -6,7 +6,7 @@ import { mapDispatchToProps, mapStateToProps } from './redux/selector';
 
 
 function App(props) {
-  console.log(props)
+  
   return (
     props.userData.token === undefined ? <Login /> : <Dashboard />
   )

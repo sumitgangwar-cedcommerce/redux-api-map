@@ -31,10 +31,10 @@ function Dashboard(props) {
   }, []);
 
   const handleNavigationToggle = useCallback(() => {
-    console.log('toggle navigation visibility');
+   
   }, []);
 
-  console.log('first' , props)
+
 
   const logo = {
     width: 124,
