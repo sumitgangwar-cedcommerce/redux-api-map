@@ -1,7 +1,14 @@
-export const saveData =(data) => {
+import { LOG_OUT, STORE_DATA } from "./actionType"
+
+export const saveData =() => {
     return {
-        type : 'storeData',
-        payload : data
+        type : STORE_DATA,
+    }
+}
+
+export const logOut = () =>{
+    return {
+        type : LOG_OUT
     }
 }
 

@@ -1,11 +1,19 @@
-const storeDataReducer = (state = {} , action) =>{
+
+let initialState = {
+    ...JSON.parse(sessionStorage.getItem('state'))
+}
+
+const storeDataReducer = (state = initialState , action) =>{
     if(action.type === "storeData"){
-        const {name,username , token} = action.payload
-        sessionStorage.setItem("state" , JSON.stringify({...state , name , username , token}))
         return {
-            ...state , name , username , token
+            ...JSON.parse(sessionStorage.getItem('state'))
         }
     }
+    else if(action.type === 'logout'){
+        sessionStorage.clear()
+        return {}
+    }
+    else return state
 }
 
 export default storeDataReducer

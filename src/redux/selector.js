@@ -1,4 +1,4 @@
-import { saveData } from "./action";
+import { logOut, saveData } from "./action";
 
 export const mapStateToProps = (state) => {
   return {
@@ -9,5 +9,6 @@ export const mapStateToProps = (state) => {
 export const mapDispatchToProps = (dispatch) => {
   return {
     saveData: (data) => dispatch(saveData({ ...data })),
+    logOut : () => dispatch(logOut())
   };
 };
